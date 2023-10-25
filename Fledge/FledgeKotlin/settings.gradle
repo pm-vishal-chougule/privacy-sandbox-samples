@@ -8,3 +8,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "FledgeSample"
 include ':app'
+include ':advertiserapp'
+include ':pubapp'

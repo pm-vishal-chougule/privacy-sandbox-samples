@@ -42,8 +42,8 @@ options](https://developer.android.com/studio/debug/dev-options) on your device.
 
 Next, run the following commands
 ```
-adb shell device_config put adservices ppapi_app_allow_list \"*\"
-adb shell device_config put adservices ppapi_app_signature_allow_list \"*\"
+adb shell device_config put adservices ppapi_app_allow_list \\"*\\"
+adb shell device_config put adservices ppapi_app_signature_allow_list \\"*\\"
 adb shell device_config put adservices adservice_system_service_enabled true
 adb shell device_config put adservices adservice_enabled true
 adb shell device_config put adservices adservice_enable_status true
