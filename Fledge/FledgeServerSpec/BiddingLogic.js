@@ -40,7 +40,6 @@ function generateBid(
   simulateDelay(0);
   var ad = {
     render_url: "https://advertiser-1.glitch.me/advertiser/shopping-ad.html",
-    metadata: json_metadata,
   };
   return { status: 0, ad: ad, bid: bid };
 }
