@@ -33,14 +33,17 @@ function generateBid(
   contextual_signals,
   custom_audience_bidding_signals
 ) {
+  console.log("JS logs: generate bid");
   var bid = 5;
   if (custom_audience_bidding_signals.name === "shoes") {
     bid = 10;
   }
   simulateDelay(0);
+
   var ad = {
     render_url: "https://advertiser-1.glitch.me/advertiser/shopping-ad.html",
   };
+  console.log("JS logs: Render url", ad);
   return { status: 0, ad: ad, bid: bid };
 }
 
@@ -51,6 +54,7 @@ function reportWin(
   contextual_signals,
   custom_audience_reporting_signals
 ) {
+  console.log("JS logs: report win");
   // Add the address of your reporting server here
   let reporting_address = "https://reporting.example.com";
   simulateDelay(0);
