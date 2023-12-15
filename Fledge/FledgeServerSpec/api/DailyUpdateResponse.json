@@ -1,0 +1,21 @@
+{
+  "user_bidding_signals": {
+    "valid": true,
+    "arbitrary": "yes"
+  },
+  "trusted_bidding_data": {
+    "trusted_bidding_uri": "https://js.example.com/bidding/trusted",
+    "trusted_bidding_keys": [
+      "key1",
+      "key2"
+    ]
+  },
+  "ads": [
+    {
+      "render_uri": "https://pm-vishal-chougule.github.io/privacy-sandbox-samples/Fledge/FledgeServerSpec/api/creatives/shoes.html",
+      "metadata": {
+        "valid": 1
+      }
+    }
+  ]
+}
