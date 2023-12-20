@@ -83,14 +83,14 @@ function reportWin(
   console.log("JS logs: report win: signals_for_buyer: ", signals_for_buyer);
   console.log("JS logs: report win: contextual_signals: ", contextual_signals);
   // Add the address of your reporting server here
-  let reporting_address = "https://reporting.example.com";
+  let reporting_address = "/";
   simulateDelay(0);
   return {
     status: 0,
     results: {
       reporting_uri:
         reporting_address +
-        "/reportWin?ca=" +
+        "reportWin.php?ca=" +
         custom_audience_reporting_signals.name,
     },
   };

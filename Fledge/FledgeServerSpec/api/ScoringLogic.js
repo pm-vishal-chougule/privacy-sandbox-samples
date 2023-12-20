@@ -52,7 +52,7 @@ function reportResult(
   console.log("JS logs: bid ", bid);
   console.log("JS logs: bid ", render_uri);
   // Add the address of your reporting server here
-  let reporting_address = "https://reporting.example.com";
+  let reporting_address = "/";
   simulateDelay(0);
   return {
     status: 0,
@@ -60,7 +60,7 @@ function reportResult(
       signals_for_buyer: '{"signals_for_buyer" : 1}',
       reporting_uri:
         reporting_address +
-        "/reportResult?render_uri=" +
+        "reportResult.php?render_uri=" +
         render_uri +
         "?bid=" +
         bid,
