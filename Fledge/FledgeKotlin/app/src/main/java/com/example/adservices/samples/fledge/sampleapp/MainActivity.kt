@@ -106,6 +106,7 @@ class MainActivity : AppCompatActivity() {
     try {
       // Get override reporting URI
       val reportingUriString = getIntentOrError("baseUrl", eventLog!!, MISSING_FIELD_STRING_FORMAT_RESTART_APP)
+      Log.d(TAG, "reportingUriString: ${reportingUriString}")
       // Replace override URIs in JS
       overrideDecisionJS = replaceReportingURI(assetFileToString(DECISION_LOGIC_FILE),
                                                reportingUriString)
@@ -162,8 +163,8 @@ class MainActivity : AppCompatActivity() {
                                            eventLog!!,
                                            MISSING_FIELD_STRING_FORMAT_RESTART_APP)
 
-    mBiddingLogicUri = Uri.parse("$overrideUriBase/bidding")
-    mScoringLogicUri = Uri.parse("$overrideUriBase/scoring")
+    mBiddingLogicUri = Uri.parse("$overrideUriBase/${BIDDING_LOGIC_FILE}")
+    mScoringLogicUri = Uri.parse("$overrideUriBase/${DECISION_LOGIC_FILE}")
     mTrustedDataUri = Uri.parse("$mBiddingLogicUri/trusted")
 
     mBuyer = resolveAdTechIdentifier(mBiddingLogicUri)
@@ -217,8 +218,7 @@ class MainActivity : AppCompatActivity() {
                         context.packageName,
                         AdTechIdentifier.fromString(biddingUri.host!!),
                         biddingUri,
-                        Uri.parse(
-                          "$biddingUri/render_$SHOES_CA_NAME"),
+                        Uri.parse("https://pm-vishal-chougule.github.io/privacy-sandbox-samples/Fledge/FledgeServerSpec/api/creatives/shoes.html"),
                         Uri.parse("$biddingUri/daily"),
                         Uri.parse("$biddingUri/trusted"),
                         eventLog::writeEvent,
@@ -236,7 +236,7 @@ class MainActivity : AppCompatActivity() {
                          AdTechIdentifier.fromString(biddingUri.host!!),
                          biddingUri,
                          Uri.parse(
-                           "$biddingUri/render_$SHOES_CA_NAME"),
+                           "https://pm-vishal-chougule.github.io/privacy-sandbox-samples/Fledge/FledgeServerSpec/api/creatives/shirts.html"),
                          Uri.parse("$biddingUri/daily"),
                          Uri.parse("$biddingUri/trusted"),
                          eventLog::writeEvent,
@@ -254,7 +254,7 @@ class MainActivity : AppCompatActivity() {
                          AdTechIdentifier.fromString(biddingUri.host!!),
                          biddingUri,
                          Uri.parse(
-                           "$biddingUri/render_$SHOES_CA_NAME"),
+                           "https://pm-vishal-chougule.github.io/privacy-sandbox-samples/Fledge/FledgeServerSpec/api/creatives/shirts.html"),
                          Uri.parse("$biddingUri/daily"),
                          Uri.parse("$biddingUri/trusted"),
                          eventLog::writeEvent,

@@ -28,4 +28,9 @@ class CustomAudienceViewModel(): ViewModel() {
     customAudienceRepository?.saveAudience(customAudienceModel)
     fetchCustomAudience()
   }
+
+  fun removeCustomAudience(customAudienceModel: CustomAudienceModel){
+    customAudienceRepository?.removeCustomAudience(customAudienceModel)
+    fetchCustomAudience()
+  }
 }

@@ -36,6 +36,13 @@ class CustomAudienceRepository (context: Context): CustomAudienceDataSource {
     return true
   }
 
+  fun removeCustomAudience(customAudienceModel: CustomAudienceModel): Boolean{
+    val editor = sharedPref.edit()
+    editor.remove(customAudienceModel.audienceName)
+    editor.apply()
+    return true
+  }
+
   companion object{
     var customAudience: CustomAudienceRepository? = null
     fun getInstance(context: Context): CustomAudienceRepository{
