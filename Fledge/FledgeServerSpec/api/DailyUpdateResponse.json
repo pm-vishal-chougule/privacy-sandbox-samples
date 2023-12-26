@@ -12,7 +12,25 @@
   },
   "ads": [
     {
-      "render_uri": "https://pm-vishal-chougule.github.io/privacy-sandbox-samples/Fledge/FledgeServerSpec/api/creatives/shoes.html",
+      "render_uri": "/creatives/shoes.html",
+      "metadata": {
+        "valid": 1
+      }
+    },
+    {
+      "render_uri": "/creatives/shirts.html",
+      "metadata": {
+        "valid": 1
+      }
+    },
+    {
+      "render_uri": "/creatives/phones.html",
+      "metadata": {
+        "valid": 1
+      }
+    },
+    {
+      "render_uri": "/creatives/watches.html",
       "metadata": {
         "valid": 1
       }

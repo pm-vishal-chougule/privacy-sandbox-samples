@@ -96,23 +96,23 @@ class MainActivity : ComponentActivity() {
                         Text("Run ad selection")
 
                         var sellerName =  remember { TextFieldState() }
-                        sellerName.text = "pm-vishal-chougule.github.io"
+                        sellerName.text = Uri.parse(SCORING_LOGIC_URL).host.toString()
                         CustomEditText(placeholder = "Seller Name", sellerName)
 
                         var decisionLogicUrl = remember { TextFieldState() }
                         decisionLogicUrl.text = SCORING_LOGIC_URL
                         CustomEditText(placeholder = "Decision Logic Url", decisionLogicUrl)
 
-                        var audienceName = remember { TextFieldState() }
-                        audienceName.text = "pm-vishal-chougule.github.io"
-                        CustomEditText(placeholder = "Audience Buyer", audienceName)
+                        var buyerName = remember { TextFieldState() }
+                        buyerName.text = Uri.parse(SCORING_LOGIC_URL).host.toString()
+                        CustomEditText(placeholder = "Audience Buyer", buyerName)
 
                         val renderUri = remember {
                             mutableStateOf("")
                         }
                         Button(onClick = {
                             adSelectionOutcomeViewModel.updateUrl("", 0, 0)
-                            runAdSelection(sellerName.text, decisionLogicUrl.text, audienceName.text)
+                            runAdSelection(sellerName.text, decisionLogicUrl.text, buyerName.text)
                         }) {
                             Text(text = "Run Ad Selection")
                         }

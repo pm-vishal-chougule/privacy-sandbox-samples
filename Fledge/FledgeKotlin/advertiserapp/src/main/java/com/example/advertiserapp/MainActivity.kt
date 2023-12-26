@@ -90,7 +90,7 @@ class MainActivity : ComponentActivity() {
                     Column (horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(text = "Create Custom Audience")
                         var buyerName =  remember { TextFieldState() }
-                        buyerName.text = "pm-vishal-chougule.github.io"
+                        buyerName.text = Uri.parse(BIDDING_LOGIC_URL).host.toString()
                         CustomEditText(placeholder = "Buyer Name", buyerName)
 
                         var audienceName = remember { TextFieldState() }
