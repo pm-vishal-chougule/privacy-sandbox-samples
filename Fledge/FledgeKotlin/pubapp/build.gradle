@@ -5,13 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.pubapp'
-    compileSdk 33
-    compileSdkExtension = 5
+    compileSdkPreview "UpsideDownCakePrivacySandbox"
 
     defaultConfig {
         applicationId "com.example.pubapp"
-        minSdk 24
-        targetSdk 33
+        minSdkPreview "UpsideDownCakePrivacySandbox"
+        targetSdkPreview "UpsideDownCakePrivacySandbox"
         versionCode 1
         versionName "1.0"
 
@@ -27,8 +26,8 @@ android {
         }
         oem {
             dimension 'androidSdk'
-            minSdkVersion 33
-            targetSdkVersion 33
+            minSdkVersion 34
+            targetSdkVersion 34
         }
     }
     buildTypes {
@@ -67,4 +66,5 @@ dependencies {
     implementation 'androidx.compose.ui:ui-tooling-preview'
     implementation 'androidx.compose.material3:material3'
     implementation 'androidx.compose.runtime:runtime-livedata'
+    implementation "androidx.concurrent:concurrent-futures:1.1.0"
 }
